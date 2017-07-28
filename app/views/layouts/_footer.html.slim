@@ -1,0 +1,10 @@
+.row
+  .small-12.columns
+    .footer
+      div
+        span.link = ENV['SITE_ADDRESS']
+        span.time = ENV['SITE_YEAR']
+      .license
+        | Designed by
+        span
+          = link_to 'Haley', 'https://github.com/babyhai', target: '_blank'

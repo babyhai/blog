@@ -1,0 +1,77 @@
+- content_for(:title) do
+  | #{t('title.about')}
+- content_for(:main) do
+  .about-page
+    .top-bar-wrapper.contain-to-grid.fixed
+      nav#about-top-bar.top-bar
+        .top-bar-left
+          ul.menu
+            li
+              a.name href='/' 回到博客
+        .top-bar-right
+          ul.menu
+            li
+              .responsive-button data-responsive-toggle="responsive-menu" data-hide-for="medium"
+                button class="menu-icon" type="button" data-toggle=''
+        #responsive-menu
+          .top-bar-right
+            ul.menu
+              li
+                a href='#about' 关于
+              li
+                a href='#skill' 技能
+              li
+                a href='#work' 作品
+              li
+                a href='#contact' 联系
+    #intro
+    header.intro
+      .intro-heading
+        .row
+          .small-12.columns
+            h1.heading Haley
+
+            .sub-heading
+              p
+                | 恐惧源于未知
+            a.circle href='#about'
+              i.fa.fa-angle-double-down
+    section#about
+      .row
+        .small-12.large-9.large-centered.columns
+          h1.title 关于我
+          p 我是Haley, 一个在魔都的 测试工程师.
+          p 目前我正在做一个论坛，想把它做成类似Ruby-china那样的；更多的是关于实战操作。
+          p 如果你有兴趣，可以联系我
+
+
+
+
+
+    section#contact
+      .row
+        .small-12.large-9.large-centered.columns
+          h1.title 联系我
+          p
+            | 共同交流.
+
+          p
+            | 保持放松, 请随时邮件与我联系
+          p.mail_to
+            = mail_to 'hllenoby@gmail.com'
+          ul.contact-ul
+            li
+              a href='https://github.com/babyhai' target='_blank'
+                i.fa.fa-github
+                | Github
+            li
+              a href='https://ruby-china.org/babyhai' target='_blank'
+                i.fa.fa-heart
+                | RubyChina
+
+          p.modified-at
+            | 本页更新于 2017-7-12
+    .footer
+      .row
+        .small-12.columns
+          div Copyright © 2017

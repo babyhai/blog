@@ -1,0 +1,22 @@
+- content_for(:title) do
+  | #{t('title.timeline')}
+.row
+  .small-12.large-9.large-centered.columns
+    ul.archives-field
+      - @posts.each do |post|
+        li
+          = link_to post.title, blog_path(post), class: 'blog-title'
+          p.tags-field
+            i.fi-calendar
+            span
+              = format_date(post.created_at)
+            i.fi-pricetag-multiple
+            span
+              = post.labels_content
+            i.fi-torsos
+            span
+              = post.visited_count
+            i.fi-heart
+            span
+              = post.liked_count
+    = paginate @posts

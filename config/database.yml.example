@@ -1,0 +1,23 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: youshe
+  host: localhost
+
+
+development:
+  <<: *default
+  database: mylog_development
+
+
+
+test:
+  <<: *default
+  database: mylog_test
+
+
+production:
+  <<: *default
+  database: mylog_development
